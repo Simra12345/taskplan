@@ -30,6 +30,10 @@ public class UserController {
     @PostMapping("/login")
     public String login(@RequestBody User user) {
 
+        if (user.getUsername() == null || user.getPassword() == null) {
+            return "Username or password missing";
+        }
+
         return userRepository.findByUsername(user.getUsername())
                 .map(dbUser -> {
                     if (dbUser.getPassword().equals(user.getPassword())) {
@@ -40,7 +44,6 @@ public class UserController {
                 })
                 .orElse("User not found");
     }
-
 
 
 }
