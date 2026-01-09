@@ -3,7 +3,7 @@ package com.simran.taskplan.Entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
     @Id
