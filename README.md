@@ -9,7 +9,6 @@ The application supports **User Authentication (Signup/Login)** and **Task CRUD 
 ## 🛠 Tech Stack
 
 ### Backend
-- Java 17
 - Spring Boot
 - Spring Data JPA
 - MySQL
