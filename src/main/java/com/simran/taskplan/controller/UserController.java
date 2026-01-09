@@ -29,7 +29,16 @@ public class UserController {
 
     @PostMapping("/login")
     public String login(@RequestBody User user) {
-        return "LOGIN HIT => " + user.getUsername();
+
+        return userRepository.findByUsername(user.getUsername())
+                .map(dbUser -> {
+                    if (dbUser.getPassword().equals(user.getPassword())) {
+                        return "Login successful";
+                    } else {
+                        return "Invalid password";
+                    }
+                })
+                .orElse("User not found");
     }
 
 
