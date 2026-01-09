@@ -26,4 +26,20 @@ public class UserController {
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
+
+    @PostMapping("/login")
+    public String login(@RequestBody User user) {
+
+        return userRepository.findByUsername(user.getUsername())
+                .map(dbUser -> {
+                    if (dbUser.getPassword().equals(user.getPassword())) {
+                        return "Login successful";
+                    } else {
+                        return "Invalid password";
+                    }
+                })
+                .orElse("User not found");
+    }
+
+
 }
