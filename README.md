@@ -39,7 +39,15 @@ CREATE DATABASE taskflow_db;
 
 
 
- Brief Explanation of the Approach
+
+
+
+
+
+
+
+
+## Brief Explanation of the Approach
 
 The application is developed using a **simple and modular approach** following standard backend and frontend practices.
 
