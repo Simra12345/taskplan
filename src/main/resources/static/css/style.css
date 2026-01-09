@@ -1,39 +1,107 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    width: 350px;
-    margin: 100px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 6px;
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
 }
+
+
+.container {
+    width: 380px;
+    background: #ffffff;
+    margin: 90px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
 
 h2 {
     text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-input, button {
+input {
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
 }
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
 
 button {
-    background: #007bff;
-    color: white;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
     cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 button:hover {
-    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
 
 a {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: center;
+    text-decoration: none;
+    color: #667eea;
+    font-size: 14px;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+li {
+    background: #f4f6f8;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+li button {
+    width: auto;
+    padding: 6px 10px;
+    background: #ff4d4d;
+    font-size: 12px;
+}
+
+li button:hover {
+    background: #e63939;
+}
+
